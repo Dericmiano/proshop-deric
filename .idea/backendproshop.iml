@@ -15,6 +15,9 @@
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
       <excludeFolder url="file://$MODULE_DIR$/venv" />
+      <excludeFolder url="file://$MODULE_DIR$/frontendproshop/venv/Lib" />
+      <excludeFolder url="file://$MODULE_DIR$/frontendproshop/venv/Scripts" />
+      <excludeFolder url="file://$MODULE_DIR$/frontendproshop/build" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

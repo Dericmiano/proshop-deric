@@ -16,14 +16,15 @@ from rest_framework import status
 @api_view(['GET'])
 def getProducts(request):
     query = request.query_params.get('keyword')
-    # print('query:', query)
-    if query is None:
+    if query == None:
         query = ''
 
-    products = Product.objects.filter(name__icontains=query)
+    products = Product.objects.filter(
+        name__icontains=query).order_by('-createdAt')
 
     page = request.query_params.get('page')
     paginator = Paginator(products, 5)
+
     try:
         products = paginator.page(page)
     except PageNotAnInteger:
@@ -33,7 +34,9 @@ def getProducts(request):
 
     if page == None:
         page = 1
+
     page = int(page)
+    print('Page:', page)
     serializer = ProductSerializer(products, many=True)
     return Response({'products': serializer.data, 'page': page, 'pages': paginator.num_pages})
 

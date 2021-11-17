@@ -10,7 +10,6 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 import os.path
-from distutils.command.config import config
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -27,7 +26,7 @@ SECRET_KEY = 'django-insecure-90rpm&%hhp(3s#=$rmc^gxh0c(=c=ca%ttzm08p$el)g&yg^7t
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', 'https://proshop-demo3.herokuapp.com/', config('SERVER', default='127.0.0.1')]
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'https://proshop-demo3.herokuapp.com/']
 
 # Application definition
 

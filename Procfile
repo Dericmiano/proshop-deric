@@ -1,1 +1,1 @@
-web: gunicorn backendproshop.wsgi --log-file-
+web: gunicorn backendproshop.wsgi --log-file -

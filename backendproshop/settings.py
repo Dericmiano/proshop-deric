@@ -24,9 +24,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-90rpm&%hhp(3s#=$rmc^gxh0c(=c=ca%ttzm08p$el)g&yg^7t'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'https://proshop-demo3.herokuapp.com/']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'proshop-demo3.herokuapp.com/']
+# ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'proshop-demo3.herokuapp.com/']
 
 # Application definition
 
@@ -197,6 +198,6 @@ AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
 AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
 AWS_STORAGE_BUCKET_NAME = 'proshop-bucket-demo3'
 
-# if os.getcwd() == '/app':
-#     DEBUG = False
+if os.getcwd() == '/app':
+    DEBUG = False
 

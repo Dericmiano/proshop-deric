@@ -28,12 +28,12 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'proshop-demo3.herokuapp.com']
 # ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'proshop-demo3.herokuapp.com/']
+
+# Application definition
 AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',
     'allauth.account.auth_backends.AuthenticationBackend',
 ]
-# Application definition
-
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -188,7 +188,7 @@ STATICFILES_DIRS = [
 ]
 MEDIA_ROOT = BASE_DIR / 'static/images'
 STATIC_ROOT = BASE_DIR / 'staticfiles'
-ADMIN_MEDIA_PREFIX = '/static/admin/'
+ADMINS_MEDIA_PREFIX = '/static/admin/'
 
 # MEDIA_ROOT = 'static/images'
 

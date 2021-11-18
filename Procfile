@@ -1,1 +1,1 @@
-web: gunicorn backendproshop.wsgi --log-file -
+web: waitress-serve --port=$PORT backendproshop.wsgi:application
